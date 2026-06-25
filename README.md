@@ -124,12 +124,6 @@ MySQL Database
 
 ---
 
-## 📜 License
-
-This project is licensed under the **MIT License**.
-
----
-
 ## 📌 Conclusion
 
 The **Complaint Management System** provides an efficient, transparent, and reliable solution for managing complaints digitally.  
