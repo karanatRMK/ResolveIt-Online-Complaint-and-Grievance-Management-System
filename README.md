@@ -1,130 +1,119 @@
-# 📝 Complaint Management System
+# 🚀 ResolveIt – Online Complaint and Grievance Management System
 
-A full-stack **Complaint Management System** built using **Spring Boot**, **React (Vite)**, and **MySQL**.  
-This application allows users to submit complaints digitally and enables administrators to manage and resolve them efficiently.
+## 📖 Overview
 
----
-
-## 📌 Project Overview
-
-In many institutions, complaints are still handled manually, which causes delays, lack of transparency, and poor tracking.  
-The **Complaint Management System** solves this problem by providing a centralized, digital platform for complaint submission and management.
+**ResolveIt** is a full-stack web application that streamlines complaint and grievance handling through a secure, role-based workflow. Built with **React.js**, **Spring Boot**, and **MySQL**, the system enables users to submit complaints online while allowing employees and administrators to efficiently manage, track, and resolve them.
 
 ---
 
-## 🎯 Objectives
+## 🌟 Key Features
 
-- Provide a simple way to submit complaints online
-- Enable transparent complaint tracking
-- Reduce manual work and paperwork
-- Improve response time and accountability
-- Maintain a centralized complaint database
+### 👤 User
 
----
+* Register and login using JWT authentication
+* Submit complaints with file attachments
+* Track complaint status in real time
+* View complaint history
+* Browse public complaints
 
-## ✨ Features
+### 👨‍💼 Employee
 
-### 👤 User Side
-- User registration and login
-- Submit complaints
-- View submitted complaints
-- Track complaint status
+* View assigned complaints
+* Update complaint status
+* Add comments and resolution details
 
-### 🛠️ Admin Side
-- Secure admin access
-- View all complaints
-- Manage and update complaint status
-- Monitor complaint resolution process
+### 👨‍💼 Senior Employee
 
----
+* Monitor escalated complaints
+* Manage complaint assignments
+* Supervise complaint resolution
 
-## 🛠️ Technology Stack
+### 👨‍💻 Administrator
 
-| Layer | Technology |
-|------|-----------|
-| Frontend | React + Vite |
-| Backend | Java + Spring Boot |
-| Database | MySQL |
-| API Type | REST APIs |
+* Manage users and employee roles
+* Monitor all complaints
+* Approve employee requests
+* Track complaint analytics
 
 ---
 
-## 🧱 System Architecture
+## 🛠 Tech Stack
 
-React Frontend (Port 3000)
-Spring Boot Backend (Port 8081)
-MySQL Database
-
+| Layer          | Technologies                      |
+| -------------- | --------------------------------- |
+| Frontend       | React.js, Bootstrap, Vite         |
+| Backend        | Spring Boot, Spring Security, JWT |
+| Database       | MySQL, Hibernate (JPA)            |
+| Authentication | JWT (JSON Web Token)              |
+| Notifications  | Gmail SMTP                        |
+| Build Tool     | Maven                             |
 
 ---
 
-## 🚀 How to Run the Project
+## 🔐 Core Functionalities
+
+* JWT-based Authentication & Authorization
+* Role-Based Access Control (RBAC)
+* Complaint Submission & Tracking
+* Complaint Assignment & Status Updates
+* Automated Complaint Escalation
+* Email Notifications
+* File Attachment Support
+* Public Complaint Portal
+* Responsive User Interface
+
+---
+
+## ⚙️ Application Flow
+
+1. Users register and log in securely.
+2. Complaints are submitted with relevant details and attachments.
+3. Employees review and update complaint status.
+4. Senior Employees manage escalated complaints.
+5. Administrators oversee users, complaints, and system operations.
+
+---
+
+## ▶️ Getting Started
 
 ### Prerequisites
-- Java JDK
-- Node.js & npm
-- MySQL
-- Any IDE (VS Code / IntelliJ)
+
+* Java 17+
+* Node.js & npm
+* MySQL
+* Maven
+
+### Run the Application
+
+```bash
+# Backend
+mvn spring-boot:run
+
+# Frontend
+npm install
+npm run dev
+```
+
+Backend: **http://localhost:8081**
+
+Frontend: **http://localhost:3000**
 
 ---
 
-### Steps to Run
+## 📈 Future Enhancements
 
-1. Clone the repository
-2. Start the **Spring Boot backend**
-   - Backend runs on **http://localhost:8081**
-3. Start the **React frontend**
-   - Frontend runs on **http://localhost:3000**
-4. Open the frontend URL in a browser
-
----
-
-## 🔐 Security
-
-- Role-based access (User / Admin)
-- Input validation
-- Secure API communication
+* SMS notifications
+* Mobile application
+* AI-powered complaint categorization
+* Analytics dashboard
+* Real-time notifications using WebSockets
 
 ---
 
-## 📊 Advantages
+## 📌 Use Cases
 
-- Easy complaint submission
-- Real-time complaint tracking
-- Centralized data storage
-- User-friendly interface
-- Scalable architecture
-
----
-
-## ⚠️ Limitations
-
-- Requires internet connection
-- Admin action needed for resolution
-- Notification system not included in basic version
-
----
-
-## 🔮 Future Enhancements
-
-- Email / SMS notifications
-- Complaint priority levels
-- Admin analytics dashboard
-- Mobile application
-- Real-time updates
-
----
-
-## 🧪 Use Cases
-
-- College complaint portal
-- Hostel management system
-- Corporate grievance handling
-- Municipal service complaints
-
----
-
-## 📌 Conclusion
-
-The **Complaint Management System** provides an efficient, transparent, and reliable solution for managing complaints digitally.  
-It is suitable for academic projects as well as real-world applications.
+* Educational Institutions
+* Corporate Organizations
+* Government Grievance Portals
+* Hostel & Residential Management
+* Customer Support Systems
