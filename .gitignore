@@ -1,0 +1,31 @@
+# Node
+node_modules/
+
+# Environment
+.env
+
+# Build outputs
+dist/
+build/
+
+# Java / Maven
+target/
+*.class
+*.jar
+*.war
+
+# Logs
+logs/
+*.log
+*.gz
+
+# Uploads
+uploads/
+
+# IDE
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db

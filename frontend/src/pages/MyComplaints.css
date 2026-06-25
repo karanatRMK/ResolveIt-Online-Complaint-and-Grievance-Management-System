@@ -1,0 +1,587 @@
+/* MyComplaints.css - Clean Professional Layout */
+
+.my-complaints-container {
+  padding: 1.5rem 1.5rem 3rem;
+  background: #ffffff;
+  min-height: 100vh;
+  color: #0f0f0f;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Clean Header */
+.clean-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0 2rem;
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 2rem;
+}
+
+.header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0f0f0f;
+  margin: 0;
+}
+
+.page-subtitle {
+  font-size: 1rem;
+  color: #606060;
+  margin: 0;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Stats Cards */
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card-clean {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #e5e5e5;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.stat-card-clean:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.stat-icon-clean {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  color: white;
+}
+
+.stat-content-clean {
+  flex: 1;
+}
+
+.stat-number-clean {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #0f0f0f;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.stat-label-clean {
+  font-size: 0.875rem;
+  color: #606060;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Complaint Grid */
+.complaints-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 1400px) {
+  .complaints-grid {
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .complaints-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Complaint Card - Fixed to remove empty space */
+.complaint-card {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  padding: 16px; /* Added padding around the card */
+}
+
+.complaint-card:hover {
+  border-color: #2196F3;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(33, 150, 243, 0.12);
+}
+
+/* Status Indicator Bar at Top - Replaces empty colored space */
+.status-indicator-bar {
+  height: 4px;
+  width: 100%;
+  border-radius: 2px 2px 0 0;
+  margin-bottom: 16px;
+}
+
+.status-new-bar { background: #2196F3; }
+.status-review-bar { background: #FF9800; }
+.status-progress-bar { background: #4CAF50; }
+.status-resolved-bar { background: #F44336; }
+
+/* Urgency Indicator */
+.urgency-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.urgency-high { background: #FFEBEE; color: #D32F2F; }
+.urgency-medium { background: #FFF3E0; color: #F57C00; }
+.urgency-low { background: #E8F5E9; color: #388E3C; }
+.urgency-normal { background: #E3F2FD; color: #1976D2; }
+
+/* Card Header (Meta Info) */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.category-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.4rem 0.8rem;
+  background: #f5f5f5;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  color: #606060;
+  border: 1px solid #e0e0e0;
+}
+
+.posted-date {
+  font-size: 0.75rem;
+  color: #909090;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Card Body */
+.card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #0f0f0f;
+  margin: 0 0 10px 0;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-description {
+  font-size: 0.875rem;
+  color: #606060;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  flex-grow: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Stats Section */
+.card-stats {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 12px 0;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+  margin: 12px 0;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: #606060;
+}
+
+.stat-item.likes {
+  color: #F44336;
+}
+
+.stat-item.attachments {
+  color: #2196F3;
+}
+
+.stat-item.id {
+  color: #666;
+  font-weight: 500;
+}
+
+/* Assigned Section with Status */
+.assigned-section {
+  margin-top: 12px;
+  padding: 12px;
+  background: #fafafa;
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+}
+
+.assigned-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.assigned-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.assigned-label {
+  font-size: 0.75rem;
+  color: #909090;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.25rem;
+}
+
+.assigned-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #0f0f0f;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Status Pill (beside assigned employee) */
+.status-pill {
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  min-width: 80px;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.status-new-pill { background: #E3F2FD; color: #1976D2; }
+.status-review-pill { background: #FFF3E0; color: #F57C00; }
+.status-progress-pill { background: #E8F5E9; color: #388E3C; }
+.status-resolved-pill { background: #FFEBEE; color: #D32F2F; }
+
+/* Card Footer */
+.card-footer {
+  padding-top: 16px;
+  margin-top: 12px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.updated-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #909090;
+  font-size: 0.8rem;
+}
+
+.view-details-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  background: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.view-details-btn:hover {
+  background: #1976D2;
+  transform: translateY(-1px);
+}
+
+/* Empty State */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  text-align: center;
+  background: #fafafa;
+  border-radius: 12px;
+  border: 2px dashed #e0e0e0;
+  margin: 2rem 0;
+}
+
+.empty-icon {
+  font-size: 4rem;
+  color: #e0e0e0;
+  margin-bottom: 1.5rem;
+}
+
+.empty-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #0f0f0f;
+  margin-bottom: 0.75rem;
+}
+
+.empty-subtitle {
+  font-size: 1rem;
+  color: #606060;
+  margin-bottom: 2rem;
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+/* Loading Skeleton */
+.loading-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.loading-card {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e5e5e5;
+  overflow: hidden;
+  padding: 16px;
+}
+
+.loading-line {
+  height: 12px;
+  background: #f0f0f0;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  animation: loading 1.5s infinite;
+}
+
+.loading-line.short {
+  width: 40%;
+}
+
+.loading-line.medium {
+  width: 70%;
+}
+
+.loading-line.long {
+  width: 100%;
+}
+
+@keyframes loading {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+/* Error Alert */
+.error-alert {
+  background: #FFEBEE;
+  border: 1px solid #FFCDD2;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.error-alert svg {
+  color: #D32F2F;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.error-alert p {
+  margin: 0;
+  color: #D32F2F;
+  font-size: 0.9rem;
+  flex: 1;
+}
+
+/* Refresh Section */
+.refresh-section {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+  margin-top: 2rem;
+  border-top: 1px solid #e5e5e5;
+}
+
+.refresh-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.refresh-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.refresh-text h4 {
+  margin: 0;
+  font-weight: 600;
+  color: #0f0f0f;
+  font-size: 1.125rem;
+}
+
+.refresh-text p {
+  margin: 0;
+  color: #606060;
+  font-size: 0.875rem;
+}
+
+.refresh-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #0f0f0f;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #f5f5f5;
+  border-color: #cccccc;
+}
+
+.btn.primary {
+  background: #2196F3;
+  color: white;
+  border: none;
+}
+
+.btn.primary:hover {
+  background: #1976D2;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .my-complaints-container {
+    padding: 1rem;
+  }
+  
+  .clean-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  
+  .header-right {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  
+  .complaints-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .assigned-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .refresh-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .refresh-actions {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .card-footer .footer-content {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+}
